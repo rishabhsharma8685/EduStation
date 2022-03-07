@@ -1,0 +1,88 @@
+<!DOCTYPE html>   
+<html>   
+<head>
+     <meta charset="UTF-8">      
+     <meta name="viewport" content="width=device-width, initial-scale=1">  
+     <title> Upload Notes • EduStation </title> 
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<style> 
+
+html::-webkit-scrollbar{
+                        width:0.8rem;
+                       }  
+        
+ html::-webkit-scrollbar-track{
+                                background:rgb(3, 3, 3);
+                                }
+        
+html::-webkit-scrollbar-thumb{
+                              background: rgb(248, 234, 234);
+                             } 
+
+Body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: medium;                     
+      margin: 0%;            
+      box-sizing: border-box;
+      overflow-x: hidden; 
+      color: #f39c12;
+     }  
+     
+input
+      {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;              
+        border: 2px solid white;  
+        box-sizing: border-box;    
+        border-radius: 10px;       
+      }
+      
+input[type='radio']{
+                     margin-left: -200px;
+}      
+
+input[type='file']{
+                   border: none;  
+                   
+}
+.upload{ 
+        width: 40%;
+        margin: 70px auto;
+        padding: 12px 20px;              
+        background-image: url(img.jpg);
+       }
+
+button {   
+        background-color: #f39c12;
+        width: 100%;  
+        color: white;  
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: 2px solid white;  
+        cursor: pointer;   
+        border-radius: 10px;
+               
+        } 
+
+</style>
+</head>
+
+<body>
+    <form onsubmit="return alert('files uploaded successfully')">
+     <div class="upload">
+         <h1>Upload Notes Here</h1>
+         <input type="text" placeholder="Name" name="name" required>
+         <input type="email" placeholder="Email" name="email" required>
+         <p>Select the class for which you want to upload notes</p>
+         10th:<input type="radio" name="r1" required> <br>
+		 11th:<input type="radio" name="r1" required> <br>
+         12th:<input type="radio" name="r1" required>
+         <input type="file" id="myFile" name="filename" required>
+         <button type="submit" >Submit</button>
+     </div>
+    </form> 
+</body>
+</html>     

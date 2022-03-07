@@ -1,0 +1,200 @@
+<!DOCTYPE html>   
+<html>   
+<head>
+     <meta charset="UTF-8">      
+     <meta name="viewport" content="width=device-width, initial-scale=1">  
+     <title> Login • EduStation </title> 
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+ <style> 
+
+html::-webkit-scrollbar{
+                        width:0.8rem;
+                       }  
+
+html::-webkit-scrollbar-track{
+                               background:rgb(3, 3, 3);
+                             }
+
+html::-webkit-scrollbar-thumb{
+                              background: rgb(248, 234, 234);
+                             } 
+
+header{
+        background:linear-gradient(90deg, #f1c40f, #f39c12); 
+        width:100% ;
+        height: 60px;
+        display: flex;
+        align-items: center;             
+        box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+        padding: 0 5%;
+        font-size: large;  
+        position: fixed;
+        top:0; left: 0; right: 0;
+        z-index: 9999;                 
+      }  
+
+
+Body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: medium;                     
+      margin: 0%;            
+      box-sizing: border-box;
+      overflow-x: hidden; 
+      color: white;
+      background-image: url(img4.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size:cover;
+     }
+            
+button {   
+        background-image: linear-gradient(to right, #f39c12 0%, #f1c40f 51%, #f39c12 100%);
+        width: 100%;  
+        color: white;  
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: 2px solid white;  
+        cursor: pointer;   
+        border-radius: 10px;
+        transition: 0.5s;                                 
+        background-size: 200% ;       
+        }
+        
+button:hover{background-position: right ;}        
+
+
+.container{         
+          width: 40%;      
+          margin: 100px auto;
+          padding: 25px;   
+          background:linear-gradient(90deg, #f1c40f, #f39c12);          
+          border-radius: 10px; 
+          box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);                      
+          } 
+       
+.signup{  
+          width: 40%;               
+          margin: -70px auto;
+          padding: 25px;   
+          background:linear-gradient(90deg, #f1c40f, #f39c12);         
+          border-radius: 10px;
+          box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+      }          
+         
+input
+      {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;              
+        border: 2px solid white;  
+        box-sizing: border-box;    
+        border-radius: 10px;       
+      }  
+       
+#login{text-align: center;
+       color: white;
+       }            
+
+
+
+.links {
+        color: #fff;
+        text-transform: uppercase;
+         text-decoration: none;
+        position: relative;
+        text-shadow: 1px 1px black;
+        }
+                   
+                   
+.links:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: #fff;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+             }
+                         
+.links:hover:after {
+                    width: 100%;
+                    left: 0;
+                    }             
+
+
+footer{opacity: 1;
+       margin-top: 100px;
+      } 
+      
+a{
+  text-decoration: none;
+ }  
+
+#togglePassword{position: absolute;
+  color: #f39c12;  
+  margin-top: -37px;
+  margin-left: 37%;
+  cursor: pointer;
+ }
+
+.logo{
+      color: white;
+      font-size: x-large;
+     } 
+ 
+</style>   
+</head>    
+<body> 
+     <header>
+        <a href="start page.html" class="logo"><i class="fas fa-user-graduate"></i>EduStation</a>       
+     </header>     
+    <form action="EduStation.html" method="post" onsubmit="return alert('Welcome to EduStation')">  
+        <div class="container"> 
+            <h1 id="login"> Log in </h1>  
+                       
+            <input type="text" placeholder="Username" name="Username" required>  
+            
+            
+            <input id="id_password" type="password" placeholder=" Password" name="password" required> 
+            <i class="far fa-eye" id="togglePassword"></i>
+                    
+            <button type="submit">LOGIN</button>                                    
+            <a class="links" href="Forgotpassword.html">Forgot Password?</a>                
+        </div>
+
+        <div class="signup">            
+            Don't have an account? <a class="links" href="signup page.html">Sign up</a>
+        </div> 
+        
+    </form>
+    
+    <footer>
+        .
+    </footer>
+    
+    <script>
+        //show/hide password
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#id_password');
+ 
+        togglePassword.addEventListener('click', function (e) {
+           // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+           // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+        });
+ 
+
+        
+    </script>
+
+</body>     
+</html>
